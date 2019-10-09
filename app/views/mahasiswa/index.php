@@ -11,7 +11,6 @@
 						<li><?= $mhs['jurusan']; ?></li>
 					</ul>
 				<?php endforeach; ?>
-			</ul>
 		</div>
 	</div>
 </div>
