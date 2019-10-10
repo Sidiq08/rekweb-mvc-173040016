@@ -8,7 +8,7 @@
 	
 	<div class="row">
 		<div class="col-6">
-		<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#formModal">
+		<button type="button" class="btn btn-primary tombolTambahData" data-toggle="modal" data-target="#formModal">
   			Tambah Data Mahasiswa
 		</button>
 		<br>
@@ -17,7 +17,8 @@
 					<ul class="list-group">
 						<li class="list-group-item">
 							<?= $mhs['nama']; ?>
-							<a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right ml-1" onclick="return confirm('yakin ?');">hapus</a>
+							<a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger float-right ml-1" onclick="return confirm('yakin ?');">X</a>
+							<a href="<?= BASEURL; ?>/mahasiswa/edit/<?= $mhs['id']; ?>" class="badge badge-success float-right ml-1 tampilModalEdit" data-toggle="modal" data-target="#formModal">edit</a>
 							<a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id']; ?>" class="badge badge-primary float-right ml-1">detail</a>
 						</li>
 					</ul>
@@ -30,7 +31,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="judulModal">Tambah Data Mahasiswa</h5>
+        <h5 class="modal-title" id="judulModalLabel">Tambah Data Mahasiswa</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -44,12 +45,12 @@
 		    	<input type="text" class="form-control" id="nama" name = "nama">
 		  	</div>
 		  	<div class="form-group">
-		   		<label for="nrp">Nrp</label>
+		   		<label for="nrp">NRP</label>
 		    	<input type="number" class="form-control" id="nrp" name = "nrp">
 		  	</div>
 		  	<div class="form-group">
 		   		<label for="email">Email</label>
-		    	<input type="email" class="form-control" id="email" name = "email">
+		    	<input type="email" class="form-control" id="email" name = "email" placeholder="email@example.com">
 		  	</div>
 		  	 <div class="form-group">
 			    <label for="jurusan">Jurusan</label>
